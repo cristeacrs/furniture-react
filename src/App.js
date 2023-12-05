@@ -43,7 +43,7 @@ function App() {
             Get advice
           </Button>
           <div>
-            <h1 className="text-3xl font-bold underline  hover:bg-sky-700">
+            <h1 className="text-3xl font-bold underline cursor-pointer hover:bg-sky-700">
               History!
             </h1>
             {history.map((text) => (
