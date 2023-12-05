@@ -42,7 +42,7 @@ function App() {
           <Button variant="primary" onClick={getAdvice} disabled={loading}>
             Get advice
           </Button>
-          <div>
+          <div className="history">
             <h1 className="text-3xl font-bold underline cursor-pointer hover:bg-sky-700">
               History!
             </h1>
