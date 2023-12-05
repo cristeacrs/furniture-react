@@ -5,6 +5,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
 import "./App.css";
+
 function App() {
   const [loading, setLoading] = useState(false);
   const [advice, setAdvice] = useState("Initial advice");
@@ -42,7 +43,9 @@ function App() {
             Get advice
           </Button>
           <div>
-            {" "}
+            <h1 className="text-3xl font-bold underline  hover:bg-sky-700">
+              History!
+            </h1>
             {history.map((text) => (
               <div key={text}>{text}</div>
             ))}
