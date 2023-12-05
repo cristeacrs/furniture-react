@@ -1,9 +1,8 @@
-import React from "react";
-// import {Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button} from "@nextui-org/react";
-// import {AcmeLogo} from "./AcmeLogo.jsx";
-
-import { useState, useEffect } from "react";
-// import {NextUIProvider} from "@nextui-org/react";
+import React, { useState, useEffect } from "react";
+import Button from "react-bootstrap/Button";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 
 import "./App.css";
 function App() {
@@ -34,22 +33,23 @@ function App() {
     setLoading(false);
   }
   return (
-    <div>
-      <h1 className="header">Welcome to advices</h1>
-
-      <button
-        type="button"
-        className="btn btn-success button-advice"
-        onClick={getAdvice}
-        disabled={loading}
-      >
-        Get advice
-      </button>
-      {history.map((text) => (
-        <div key={text}>{text}</div>
-      ))}
-      <h3 className="text-center">{advice}</h3>
-    </div>
+    <Container fluid="lg">
+      <Row>
+        <Col>
+          <h1 className="header">Welcome to advices</h1>
+          <h3 className="text-center">{advice}</h3>
+          <Button variant="primary" onClick={getAdvice} disabled={loading}>
+            Get advice
+          </Button>
+          <div>
+            {" "}
+            {history.map((text) => (
+              <div key={text}>{text}</div>
+            ))}
+          </div>
+        </Col>
+      </Row>
+    </Container>
   );
 }
 
