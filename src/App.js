@@ -41,7 +41,7 @@ function App() {
           <Button variant="primary" onClick={getAdvice} disabled={loading}>
             Get advice
           </Button>
-          <div>
+          <div className="history">
             {" "}
             {history.map((text) => (
               <div key={text}>{text}</div>
